@@ -2,6 +2,6 @@ streamlit
 mediapipe
 tensorflow
 matplotlib
-opencv-python
+opencv-python-headless
 pillow
 sklearn
