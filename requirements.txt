@@ -2,7 +2,7 @@ streamlit
 mediapipe
 tensorflow
 matplotlib.pyplot
-cv2
+opencv-python
 PIL
 webbrowser
 sklearn.model_selection
