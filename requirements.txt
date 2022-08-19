@@ -1,0 +1,8 @@
+streamlit
+mediapipe
+tensorflow
+matplotlib.pyplot
+cv2
+PIL
+webbrowser
+sklearn.model_selection
