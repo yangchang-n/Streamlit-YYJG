@@ -3,5 +3,6 @@ mediapipe
 tensorflow
 matplotlib
 opencv-python-headless
+opencv-python
 pillow
 sklearn
