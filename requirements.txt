@@ -3,6 +3,6 @@ mediapipe
 tensorflow
 matplotlib
 opencv-python
-PIL
+pillow
 webbrowser
 sklearn
