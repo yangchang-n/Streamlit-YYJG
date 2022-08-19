@@ -4,5 +4,4 @@ tensorflow
 matplotlib
 opencv-python
 pillow
-webbrowser
 sklearn
