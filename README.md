@@ -1,4 +1,4 @@
-<h3 align = 'center'>Project_005_Try_Streamlit</h3>
+<h3 align = 'center'>Project-005-Try-Streamlit</h3>
 
 ####
 
