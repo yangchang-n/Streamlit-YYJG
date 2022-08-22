@@ -96,14 +96,14 @@ def getframe_list(filepath, fps) :
     print('height :', height)
     print('fps :', fps)    
 
-    framelist=[]
+    framelist = []
     count = 0
 
     while(video.isOpened()) :
         ret, image = video.read()
 
         if ret:
-            if(int(video.get(1)) % fps == 0) :
+            if (int(video.get(1)) % fps == 0) :
                 framelist.append(image)
         else:
             break
