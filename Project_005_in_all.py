@@ -99,7 +99,7 @@ def getframe_list(filepath, fps) :
     framelist = []
     count = 0
 
-    while(video.isOpened()) :
+    while (video.isOpened()) :
         ret, image = video.read()
 
         if ret:
