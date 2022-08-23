@@ -474,7 +474,7 @@ def sub_page_2() :
 #                     if count_col == 4 :
 #                         count_col = 0
 #                         cols_photo = st.columns(4)
-                    correl_imagelist.append([save_image, allscore])
+                    correl_imagelist.append([save_image, allscore, text1, text2])
 #                     cols_photo[count_col].image(save_image, width = 160)
 #                     count_col += 1
 #                     continue
@@ -498,7 +498,7 @@ def sub_page_2() :
                 count_col_2 = 0
                 cols_photo_2 = st.columns(4)
             count2 += 1
-            cols_photo_2[count_col_2].image(bestpicture[0], width = 160)
+            cols_photo_2[count_col_2].image(bestpicture[0], width = 160, caption = bestpicture[2] + '\n' + bestpicture[3])
             bestpicture[0] = cv2.cvtColor(bestpicture[0], cv2.COLOR_BGR2RGB)
             cv2.imwrite('saved_image/best_image{:0>4}_s{}'.format(count2, int(bestpicture[1])) + '.png', bestpicture[0])
             count_col_2 += 1
@@ -642,7 +642,7 @@ def sub_page_3() :
     #                     if count_col == 4 :
     #                         count_col = 0
     #                         cols_photo = st.columns(4)
-                        correl_imagelist.append([save_image, allscore])
+                        correl_imagelist.append([save_image, allscore, text1, text2])
     #                     cols_photo[count_col].image(save_image, width = 160)
     #                     count_col += 1
     #                     continue
@@ -715,7 +715,7 @@ def sub_page_3() :
                     count_col_2 = 0
                     cols_photo_2 = st.columns(4)
                 count2 += 1
-                cols_photo_2[count_col_2].image(bestpicture[0], width = 160)
+                cols_photo_2[count_col_2].image(bestpicture[0], width = 160, caption = bestpicture[2] + '\n' + bestpicture[3])
                 bestpicture[0] = cv2.cvtColor(bestpicture[0], cv2.COLOR_BGR2RGB)
                 cv2.imwrite('saved_image/best_image{:0>4}_s{}'.format(count2, int(bestpicture[1])) + '.png', bestpicture[0])
                 count_col_2 += 1
@@ -835,10 +835,11 @@ def sub_page_4() :
 
                     allscore = lifescore
                     predata = nowdata
+                    arg_max = pose_predict.argmax()
 
                     text1 = 'Model_Score : {}'.format(round(lifescore, 2))
                     text2 = 'Angle_Score : {}'.format(round(100 - abs(lifeangle), 2))
-                    text3 = 'Pose_Score : {}, {}'.format(round(pose_predict[0][1] * 100, 2), 'Good or not : ' + str(pose_predict.argmax()))
+                    text3 = 'Pose_Score : {}, {}'.format(round(pose_predict[0][1] * 100, 2), 'Good or not : ' + str(arg_max))
                     org1 = (30, 30)
                     org2 = (30, 60)
                     org3 = (30, 90)
@@ -860,11 +861,11 @@ def sub_page_4() :
                     frame_window_ori.image(image)
                     frame_window.image(black_window)
 
-                    if (abs(lifeangle) < 10) :
+                    if (abs(lifeangle) < 10) and (arg_max == 1) :
     #                     if count_col == 4 :
     #                         count_col = 0
     #                         cols_photo = st.columns(4)
-                        correl_imagelist.append([save_image, allscore])
+                        correl_imagelist.append([save_image, allscore, text1, text2, str(round(pose_predict[0][1] * 100, 2))])
     #                     cols_photo[count_col].image(save_image, width = 160)
     #                     count_col += 1
     #                     continue
@@ -937,7 +938,7 @@ def sub_page_4() :
                     count_col_2 = 0
                     cols_photo_2 = st.columns(4)
                 count2 += 1
-                cols_photo_2[count_col_2].image(bestpicture[0], width = 160)
+                cols_photo_2[count_col_2].image(bestpicture[0], width = 160, caption = bestpicture[2] + '\n' + bestpicture[3] + '\n' + 'Pose_Score : ' + bestpicture[4])
                 bestpicture[0] = cv2.cvtColor(bestpicture[0], cv2.COLOR_BGR2RGB)
                 cv2.imwrite('saved_image/best_image{:0>4}_s{}'.format(count2, int(bestpicture[1])) + '.png', bestpicture[0])
                 count_col_2 += 1
