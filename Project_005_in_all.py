@@ -533,10 +533,11 @@ def sub_page_3() :
     if video_file is not None :      
         
         vid = video_file.name
-        framelist = getframe_list(vid, int(option_3))
         
         with open(vid, mode = 'wb') as f :
             f.write(video_file.read())
+            
+        framelist = getframe_list(vid, int(option_3))
             
         st.markdown(f'''
         ##### 영상 분석 중...
@@ -750,10 +751,11 @@ def sub_page_4() :
     if video_file is not None :      
         
         vid = video_file.name
-        framelist = getframe_list(vid, int(option_3))
         
         with open(vid, mode = 'wb') as f :
             f.write(video_file.read())
+            
+        framelist = getframe_list(vid, int(option_3))
             
         st.markdown(f'''
         ##### 영상 분석 중...
