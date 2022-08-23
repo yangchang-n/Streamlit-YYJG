@@ -294,7 +294,7 @@ def sub_page_1() :
             predata = nowdata
 
             text1 = 'Model_Score : {}'.format(round(lifescore, 2))
-            text2 = 'Angle_Score : {}'.format(100 - round(abs(lifeangle), 2))
+            text2 = 'Angle_Score : {}'.format(round(100 - abs(lifeangle), 2))
             org1 = (30, 30)
             org2 = (30, 60)
             font = cv2.FONT_HERSHEY_SIMPLEX
@@ -322,7 +322,7 @@ def sub_page_1() :
                     count_col = 0
                     cols_photo = st.columns(4)
                 correl_imagelist.append([save_image, allscore])
-                cols_photo[count_col].image(save_image, width = 160)
+                cols_photo[count_col].image(save_image, width = 160, caption = text1 + '\n' + text2)
                 count_col += 1
                 continue
 
@@ -448,7 +448,7 @@ def sub_page_2() :
                 predata = nowdata
 
                 text1 = 'Model_Score : {}'.format(round(lifescore, 2))
-                text2 = 'Angle_Score : {}'.format(100 - round(abs(lifeangle), 2))
+                text2 = 'Angle_Score : {}'.format(round(100 - abs(lifeangle), 2))
                 org1 = (30, 30)
                 org2 = (30, 60)
                 font = cv2.FONT_HERSHEY_SIMPLEX
@@ -616,7 +616,7 @@ def sub_page_3() :
                     predata = nowdata
 
                     text1 = 'Model_Score : {}'.format(round(lifescore, 2))
-                    text2 = 'Angle_Score : {}'.format(100 - round(abs(lifeangle), 2))
+                    text2 = 'Angle_Score : {}'.format(round(100 - abs(lifeangle), 2))
                     org1 = (30, 30)
                     org2 = (30, 60)
                     font = cv2.FONT_HERSHEY_SIMPLEX
@@ -835,7 +835,7 @@ def sub_page_4() :
                     predata = nowdata
 
                     text1 = 'Model_Score : {}'.format(round(lifescore, 2))
-                    text2 = 'Angle_Score : {}'.format(100 - round(abs(lifeangle), 2))
+                    text2 = 'Angle_Score : {}'.format(round(100 - abs(lifeangle), 2))
                     text3 = 'Pose_Score : {}, {}'.format(round(pose_predict[0][1] * 100, 2), 'Good or not : ' + str(pose_predict.argmax()))
                     org1 = (30, 30)
                     org2 = (30, 60)
