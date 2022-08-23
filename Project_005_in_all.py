@@ -515,8 +515,7 @@ def sub_page_3() :
     global correl_save_number, picture_save_number, correl_imagelist
     
     st.markdown('<h3 style = \'text-align : center;\'>영상 파일 (mp4 형식) - Angle only, Quick analysis</h3>', unsafe_allow_html = True)   
-    st.info('영상 업로드 후 에러 메세지 출력 현상은 \'Angle only\' 옵션으로 전환 후 다시 시도해주세요.')
-    
+
     option_1 = st.text_input('저장할 최대 사진 개수를 입력해주세요. (Default : 30)', '30')
     option_2 = st.text_input('비슷한 구도 내에서 선정될 최대 사진 개수를 입력해주세요. (Default : 5)', '5')
     option_3 = st.text_input('빠른 분석을 위해 생략할 영상 프레임 수를 입력해주세요. (Default : 20)', '20')
@@ -733,7 +732,6 @@ def sub_page_4() :
     global correl_save_number, picture_save_number, correl_imagelist
     
     st.markdown('<h3 style = \'text-align : center;\'>영상 파일 (mp4 형식) - Angle & Pose, Quick analysis</h3>', unsafe_allow_html = True) 
-    st.info('영상 업로드 후 에러 메세지 출력 현상은 \'Angle only\' 옵션으로 전환 후 다시 시도해주세요.')
     
     option_1 = st.text_input('저장할 최대 사진 개수를 입력해주세요. (Default : 30)', '30')
     option_2 = st.text_input('비슷한 구도 내에서 선정될 최대 사진 개수를 입력해주세요. (Default : 5)', '5')
