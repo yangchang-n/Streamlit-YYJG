@@ -21,6 +21,8 @@ import webbrowser
 from sklearn.model_selection import train_test_split
 from collections import deque
 
+from streamlit_webrtc import VideoTransformerBase, webrtc_streamer
+
 # --------------------------------------------------
 # function settings
 
@@ -216,7 +218,7 @@ def sub_page_1() :
     BG_COLOR = (0, 0, 0)
     MASK_COLOR = (1, 1, 1)
 
-    cap = cv2.VideoCapture(0)
+    cap = webrtc_streamer(key = 'example')
 
     cap_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     cap_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -311,8 +313,8 @@ def sub_page_1() :
             image = cv2.flip(image, 1)
             black_window = cv2.flip(black_window, 1)
             
-            cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0) ,2)
-            cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0) ,2)
+            cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0), 2)
+            cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0), 2)
             
             frame_window_ori.image(image)
             frame_window.image(black_window)
@@ -462,8 +464,8 @@ def sub_page_2() :
                     mp_holistic.POSE_CONNECTIONS,
                     landmark_drawing_spec = mp_drawing_styles.get_default_pose_landmarks_style())
 
-                cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0) ,2)
-                cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0) ,2)
+                cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0), 2)
+                cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0), 2)
 
                 frame_window_ori.image(image)
                 frame_window.image(black_window)
@@ -630,8 +632,8 @@ def sub_page_3() :
                         mp_holistic.POSE_CONNECTIONS,
                         landmark_drawing_spec = mp_drawing_styles.get_default_pose_landmarks_style())
 
-                    cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0) ,2)
-                    cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0) ,2)
+                    cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0), 2)
+                    cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0), 2)
 
                     frame_window_ori.image(image)
                     frame_window.image(black_window)
@@ -851,8 +853,8 @@ def sub_page_4() :
                         mp_holistic.POSE_CONNECTIONS,
                         landmark_drawing_spec = mp_drawing_styles.get_default_pose_landmarks_style())
 
-                    cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0) ,2)
-                    cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0) ,2)
+                    cv2.putText(black_window, text1, org1, font, 1, (255, 0, 0), 2)
+                    cv2.putText(black_window, text2, org2, font, 1, (255, 0, 0), 2)
                     cv2.putText(black_window, text3, org3, font, 1, (255, 0, 0), 2)
 
                     frame_window_ori.image(image)
