@@ -9,3 +9,11 @@
 - This repo is to create and share the website that visually implements my team YYJG's final project.
 - I used Streamlit web framework, and shared it with their own service Streamlit Share.
 - For more information, visit my team's repository [[Team YYJG repository](https://github.com/Team-YYJG/Team-YYJG)] and WBS [[Team YYJG WBS (Korean)](https://docs.google.com/spreadsheets/d/12GQ9VEX7DxRUBWMm0SNXmG4ZrZy0_ye-cy7Ktq7Y-Qo/edit#gid=785598881)]
+
+## Project Contributors
+### Team YYJG
+- [Yang Changeun](https://github.com/yangchang-n)
+- [Lee KyeongYeong](https://github.com/onlygoodman)
+- [Yang Hyeonmo](https://github.com/30MillionBerry)
+- [Kong Chanwoo](https://github.com/kongcw0330)
+- [Lee Dongjae](https://github.com/dongja2)
